@@ -35,9 +35,15 @@ export class WorkerTestComponentComponent implements OnInit {
     )
   }
 
-  
-  ngOnInit() {
-    this.Calc().then(r => this.Message = r);
+  // use 'traditional' Promise.then conctruction
+  // ngOnInit() {
+  //   this.Calc().then(r => this.Message = r);
+  // }
+
+  // use async/await conctruction
+  // this is shorthand for the promise.then construction
+  async ngOnInit() {
+    this.Message = await this.Calc();
   }
 
 }
