@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-worker-test-component',
   templateUrl: './worker-test-component.component.html',
   styleUrls: ['./worker-test-component.component.css']
 })
-export class WorkerTestComponentComponent {
+export class WorkerTestComponentComponent implements OnInit {
 
   
   Message: string = "";
@@ -36,4 +36,8 @@ export class WorkerTestComponentComponent {
   }
 
   
+  ngOnInit() {
+    this.Calc().then(r => this.Message = r);
+  }
+
 }
