@@ -26,5 +26,14 @@ export class WorkerTestComponentComponent {
     else {
     }
   }
+    
+  Calc(): Promise<string> {
+    return new Promise<string>(
+      (resolve, reject) => {
+        this.StartCalculationWorker(r => resolve(r))
+      }
+    )
+  }
+
   
 }
