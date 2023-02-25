@@ -9,7 +9,11 @@ function delay(ms: number) {
   return Date.now().toString();
 }
 
-addEventListener('message', ({ data }) => {
-  const response = `worker response to ${data}`;
-  postMessage(response);
-});
+addEventListener
+(
+  'message', 
+  ({ data }) => {
+    const response = delay(4000);
+    postMessage(response);
+  }
+);
