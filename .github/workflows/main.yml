@@ -15,7 +15,7 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
       - name: Build Angular app
-        run: ng build --prod --base-href "https://github.com/iteratica/AngularExperiments"
+        run: ng build --configuration=production --base-href "https://github.com/iteratica/AngularExperiments"
         working-directory: ./worker-thread-test
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
