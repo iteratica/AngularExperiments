@@ -24,3 +24,4 @@ jobs:
           github_token: ${{ secrets.DEPLOYMENT_GITHUB_TOKEN }}
           publish_dir: ./dist/worker-thread-test
           publish_branch: gh-pages
+          keep_files: true
