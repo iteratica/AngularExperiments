@@ -20,6 +20,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          working-directory: ./worker-thread-test
           github_token: ${{ secrets.DEPLOYMENT_GITHUB_TOKEN }}
           publish_dir: ./dist/worker-thread-test
           publish_branch: gh-pages
